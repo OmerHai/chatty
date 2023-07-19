@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "nodemon src/app.ts"
+  },
   "dependencies": {
     "compression": "^1.7.4",
     "cookie-session": "^2.0.0",
