@@ -1,10 +1,12 @@
 {
   "scripts": {
+    "start": "nodemon ./build/app.js",
     "dev": "nodemon -r tsconfig-paths/register src/app.ts | bunyan",
     "lint:check": "eslint \"src/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" --fix",
     "prettier:check": "prettier --check \"src/**/*.{ts,json}\"",
-    "prettier:fix": "prettier --write \"src/**/*.{ts,json}\""
+    "prettier:fix": "prettier --write \"src/**/*.{ts,json}\"",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json"
   },
   "dependencies": {
     "@socket.io/redis-adapter": "^8.2.1",
@@ -21,7 +23,6 @@
     "mongoose": "^7.6.1",
     "redis": "^4.6.10",
     "socket.io": "^4.7.2",
-    "ttypescript": "^1.5.15",
     "typescript-transform-paths": "^3.4.6"
   },
   "devDependencies": {
@@ -37,6 +38,7 @@
     "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.8",
     "tsconfig-paths": "^4.2.0"
   }
 }
